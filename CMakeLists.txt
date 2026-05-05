@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(ub)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
 
 include(FetchContent)
@@ -15,4 +16,3 @@ FetchContent_MakeAvailable(fmt)
 add_executable(ub ub.cpp)
 target_compile_features(ub PRIVATE cxx_std_26)
 target_link_libraries(ub PRIVATE fmt)
-target_compile_options(ub PRIVATE -Wall -Wextra -Wshadow -fdiagnostics-color=always)
