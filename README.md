@@ -38,3 +38,4 @@ In function ‘write2digits’,
 
 Note that `-flto=auto` and `-DCMAKE_BUILD_TYPE=Release` are required to reproduce. 
 
+This appears to a regression, and / or new trigger for this warning, because gcc 15.2 does not exhibit this behaviour. 
