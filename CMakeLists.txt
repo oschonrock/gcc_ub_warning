@@ -16,3 +16,6 @@ FetchContent_MakeAvailable(fmt)
 add_executable(ub ub.cpp)
 target_compile_features(ub PRIVATE cxx_std_26)
 target_link_libraries(ub PRIVATE fmt)
+# to produce the propreprocessed source for gcc bug report, uncomment these
+# target_compile_options(ub PUBLIC -save-temps)
+# target_compile_options(fmt PUBLIC -save-temps)
